@@ -23,15 +23,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Caches local gradle repository
-      - name: Cache gradle local repository
+      # Caches local maven repository
+      - name: Cache maven local repository
         uses: actions/cache@v1
         with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
-            ${{ runner.os }}-gradle-
-
+            ${{ runner.os }}-maven-
       # Sets up java 8 with java FX
       - name: Setup Java
         uses: actions/setup-java@v1
@@ -41,11 +40,11 @@ jobs:
 
       # Builds and installs the artifact
       - name: Build and Install
-        run: gradle clean build
+        run: mvn clean install
 
       # Uploads the Artifact to Github. You will be able to find it on your action workflow run
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: final-artifact
-          path: build/libs
+          path: target

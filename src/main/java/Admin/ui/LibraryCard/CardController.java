@@ -48,7 +48,14 @@ public class CardController implements Initializable {
         }catch(Exception ex){
 
         }
-
+        //crearea unei casete de text
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("Emitere cu succes");
+        String s ="Cardul a fost emis cu succes! ";
+        alert.setContentText(s);
+        alert.show();
+        TimeUnit.SECONDS.sleep(1);
+        alert.close();
 
     }
 

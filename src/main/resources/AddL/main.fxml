@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.main.MainController">
+    <children>
+        <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true" styleClass="jfx-drawer" />
+        <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                    <children>
+                        <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab closable="false" styleClass="tab-main" text="ADMIN DASHBOARD">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="281.0" fitWidth="346.0" layoutX="51.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../java/Admin/ui/main/6384422.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="271.0" fitWidth="376.0" layoutX="361.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../java/Admin/ui/main/kisspng-library-card-computer-icons-book-piano-education-card-5b49982e33e5b6.0584718015315497422126.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="183.0" fitWidth="323.0" layoutX="672.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../java/Admin/ui/main/toppng.com-email-send-icon-614x280.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </JFXTabPane>
+                    </children>
+                </AnchorPane>
+                <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuClose" text="Ieșire" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Add">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuAddMember" text="Adaugă bibliotecar" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuAddCard" text="Emitere card" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="View">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuFullScreen" text="Full Screen" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Notify">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuOverdueNotification" text="Trimite notificare" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

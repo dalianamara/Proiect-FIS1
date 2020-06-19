@@ -5,7 +5,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="757.0" style="-fx-background-image: url('@/src/main/java/Admin/ui/OTP/lib.jpg');" styleClass="root1" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.OTP.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="757.0" style="-fx-background-image: url('/AddL/lib.jpg');" styleClass="root1" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.OTP.FXMLDocumentController">
    <children>
       <JFXTextField fx:id="emailid" labelFloat="true" layoutX="161.0" layoutY="271.0" prefHeight="34.0" prefWidth="713.0" promptText="Email admin" text = "andrea.mara303@gmail.com" />
       <JFXPasswordField fx:id="password" labelFloat="true" layoutX="161.0" layoutY="336.0" prefHeight="34.0" prefWidth="713.0" promptText="Parola" />

@@ -36,7 +36,7 @@ public class MainController  {
 
     @FXML
     private void handleMenuAddMember(ActionEvent event) {
-        AdminUtil.loadWindow(getClass().getResource("/Admin/ui/AddL/Admin.fxml"), "Adaugă bibliotecar", null);
+        AdminUtil.loadWindow(getClass().getResource("/AddL/Admin.fxml"), "Adaugă bibliotecar", null);
     }
     @FXML
     private void handleMenuFullScreen(ActionEvent event) {
@@ -51,10 +51,10 @@ public class MainController  {
 
     @FXML
     private void handleMenuOverdueNotification(ActionEvent event) {
-        AdminUtil.loadWindow(getClass().getResource("/Admin/ui/SendEmail/FXMLDocument.fxml"), "Trimite notificare", null);
+        AdminUtil.loadWindow(getClass().getResource("/SendEmail/FXMLDocument.fxml"), "Trimite notificare", null);
     }
 
     public void handleMenuAddCard(ActionEvent actionEvent) {
-        AdminUtil.loadWindow(getClass().getResource("/Admin/ui/LibraryCard/card.fxml"), "Emite card", null);
+        AdminUtil.loadWindow(getClass().getResource("/LibraryCard/card.fxml"), "Emite card", null);
     }
 }

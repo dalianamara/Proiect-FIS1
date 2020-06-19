@@ -10,7 +10,7 @@
 }
 
 .root{
-    -fx-background-image: url("/java/Admin/ui/Login/books.jpg");
+    -fx-background-image: url("books.jpg");
     -fx-pref-height : 705;
     -fx-pref-width : 1036;
 

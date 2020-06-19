@@ -58,6 +58,7 @@ public class FXMLDocumentController implements Initializable {
         JSONArray jrr = new JSONArray();
         JSONParser jp = new JSONParser();
         try{
+            //crearea unui fisier pentru stocarea credentialelor(username si OTP)
             FileReader file = new FileReader("src/main/resources/Databases/OTP.json");
             jrr=(JSONArray)jp.parse(file);
         }catch(Exception ex){

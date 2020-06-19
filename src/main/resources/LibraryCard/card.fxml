@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="367.0" prefWidth="419.0" style="-fx-background-image: url('/Admin/ui/Login/books.jpg');" styleClass="root" stylesheets="@../tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.LibraryCard.CardController">
+<AnchorPane id="AnchorPane" prefHeight="367.0" prefWidth="419.0" style="-fx-background-image: url('/Login/books.jpg');" styleClass="root" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.LibraryCard.CardController">
     <children>
         <JFXTextField fx:id="username" labelFloat="true" layoutX="389.0" layoutY="304.0" prefHeight="33.0" prefWidth="259.0" promptText="Nume">
             <font>

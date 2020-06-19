@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.jfoenix</groupId>
             <artifactId>jfoenix</artifactId>
-            <version>9.0.10</version>
+            <version>8.0.4</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api -->

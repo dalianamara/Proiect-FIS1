@@ -26,6 +26,7 @@ public class LoginController1 {
     private JFXPasswordField password;
     @FXML
     private JFXTextField username;
+
     public static JSONArray readFromFiles(String fileName){
         JSONParser parser=new JSONParser();
         JSONArray list=new JSONArray();
@@ -54,7 +55,21 @@ public class LoginController1 {
         return administrator;
     }
 
-
+    public void handleLoginButtonAction(ActionEvent actionEvent) {
+        String uname = username.getText();
+        String pass = password.getText();
+        ArrayList<LibrarianData> studenti= getDriver();
+        Iterator<LibrarianData> it=studenti.iterator();
+        while(it.hasNext())
+        {
+            LibrarianData s=it.next();
+            if(s.getEmail().equals(uname) && s.getPass().equals(DigestUtils.shaHex(pass)))
+            {
+                closeStage();
+                loadMain();
+            }
+        }
+    }
 
     @FXML
     private void handleCancelButtonAction(ActionEvent event) {

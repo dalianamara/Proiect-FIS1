@@ -111,7 +111,7 @@ public class AdminController implements Initializable
       if (this.id.getText().isEmpty() || this.firstname.getText().isEmpty() || this.lastname.getText().isEmpty() || this.email.getText().isEmpty() || this.adresa.getText().isEmpty() || this.telefon.getText().isEmpty())
     {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
-      alert.setHeaderText("Adăugare esuată!");
+      alert.setHeaderText("Could not add!");
       String s = "Empty field!";
       alert.setContentText(s);
       alert.show();
@@ -122,8 +122,8 @@ public class AdminController implements Initializable
       stmt.execute();
       conn.close();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText("Adăugare cu succes!");
-        String s = "Bibliotecarul a fost adăugat cu succes!";
+        alert.setHeaderText("Added successfully!");
+        String s = "The librarian was added successfully!";
         alert.setContentText(s);
         alert.show();
         TimeUnit.SECONDS.sleep(1);
@@ -133,7 +133,7 @@ public class AdminController implements Initializable
     }
     catch (SQLException e)
     {
-      System.err.println("Exceptie!");
+      System.err.println("Exception!");
       System.err.println(e.getMessage());
     }
       try
@@ -148,7 +148,7 @@ public class AdminController implements Initializable
       }
       catch (SQLException e)
       {
-        System.err.println("Eroare " + e);
+        System.err.println("Error " + e);
       }
       this.idcolumn.setCellValueFactory(new PropertyValueFactory("ID"));
       this.firstnamecolumn.setCellValueFactory(new PropertyValueFactory("firstName"));
@@ -172,7 +172,7 @@ public class AdminController implements Initializable
   }
 
   public void sendOTP(ActionEvent actionEvent) {
-    loadWindow(getClass().getResource("/AddL/FXMLDocument.fxml"), "Trimite notificare", null);
+    loadWindow(getClass().getResource("/AddL/FXMLDocument.fxml"), "Send notification", null);
   }
   public static Object loadWindow(URL loc, String title, Stage parentStage) {
     Object controller = null;

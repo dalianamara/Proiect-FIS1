@@ -36,7 +36,7 @@
                                         </TableView>
                                     </children>
                                 </HBox>
-                                <Label alignment="CENTER" contentDisplay="TOP" layoutX="-22.0" layoutY="97.0" prefHeight="34.0" prefWidth="324.0" text="Adaugă detaliile bibliotecarului">
+                                <Label alignment="CENTER" contentDisplay="TOP" layoutX="-22.0" layoutY="97.0" prefHeight="34.0" prefWidth="324.0" text="Add librarian information">
                                     <padding>
                                         <Insets top="10.0" />
                                     </padding>

@@ -30,7 +30,7 @@ public class LibrarianController implements Initializable {
     @FXML
     private TextField telefon;
     @FXML
-    private TableView<Admin.ui.AddL.LibrarianData> studenttable;
+    private TableView<Admin.ui.AddL.LibrarianData> librarianstable;
     @FXML
     private TableColumn<Admin.ui.AddL.LibrarianData, String> idcolumn;
     @FXML
@@ -70,8 +70,8 @@ public class LibrarianController implements Initializable {
         this.emailcolumn.setCellValueFactory(new PropertyValueFactory("email"));
         this.adresacolumn.setCellValueFactory(new PropertyValueFactory("adresa"));
         this.telefoncolumn.setCellValueFactory(new PropertyValueFactory("telefon"));
-        this.studenttable.setItems(null);
-        this.studenttable.setItems(this.data);
+        this.librarianstable.setItems(null);
+        this.librarianstable.setItems(this.data);
     }
 
     private void refresh()
@@ -96,8 +96,8 @@ public class LibrarianController implements Initializable {
         this.emailcolumn.setCellValueFactory(new PropertyValueFactory("email"));
         this.adresacolumn.setCellValueFactory(new PropertyValueFactory("adresa"));
         this.telefoncolumn.setCellValueFactory(new PropertyValueFactory("telefon"));
-        this.studenttable.setItems(null);
-        this.studenttable.setItems(this.data);
+        this.librarianstable.setItems(null);
+        this.librarianstable.setItems(this.data);
     }
     private Connection connect() {
         String url = "jdbc:sqlite:src/main/resources/Databases/login.sqlite";

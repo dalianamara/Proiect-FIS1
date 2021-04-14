@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1000.0" styleClass="custom-pane1" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.Dashboard.MainController">
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1000.0" styleClass="custom-pane1" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.Dashboard.MainController">
     <children>
         <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true" styleClass="jfx-drawer" />
         <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0">
@@ -33,22 +33,22 @@
                                           <Image url="@pngwing.com.png" />
                                        </image>
                                     </ImageView>
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="256.0" layoutX="687.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="292.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="256.0" layoutX="346.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="302.0" />
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="257.0" layoutX="59.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8de7f" height="256.0" layoutX="687.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="292.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8de7f" height="256.0" layoutX="346.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="302.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8de7f" height="257.0" layoutX="59.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
                                                 <ImageView fitHeight="228.0" fitWidth="218.0" layoutX="69.0" layoutY="171.0" onMouseClicked="#handleAddLib" pickOnBounds="true" preserveRatio="true">
                                                     <image>
                                                         <Image url="@6384422.png" />
                                                     </image>
                                                 </ImageView>
-                                                <ImageView fitHeight="271.0" fitWidth="376.0" layoutX="361.0" layoutY="153.0" onMouseClicked="#handleEmiteCard" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fitHeight="240.0" fitWidth="300.0" layoutX="350.0" layoutY="175.0" onMouseClicked="#handleEmiteCard" pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@kisspng-library-card-computer-icons-book-piano-education-card-5b49982e33e5b6.0584718015315497422126.png" />
+                                                        <Image url="@/Pictures/unnamed.png" />
                                                     </image>
                                                 </ImageView>
-                                                <ImageView fitHeight="131.0" fitWidth="265.0" layoutX="700.0" layoutY="217.0" onMouseClicked="#handleSendEmail" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fitHeight="240.0" fitWidth="300.0" layoutX="710.0" layoutY="160.0" onMouseClicked="#handleSendEmail" pickOnBounds="true" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@toppng.com-email-send-icon-614x280.png" />
+                                                        <Image url="@/Pictures/email.png" />
                                                     </image>
                                                 </ImageView>
                                                 <Line endX="120.4000244140625" endY="5.4000244140625" layoutX="169.0" layoutY="138.0" startX="-102.59999084472656" startY="5.0" stroke="CORAL" strokeWidth="30.0" />
@@ -63,17 +63,17 @@
                                                 <Line endX="176.800048828125" endY="5.0" layoutX="796.0" layoutY="139.0" startX="-102.59999084472656" startY="5.0" stroke="CORAL" strokeWidth="30.0" />
                                                 <Line endX="-53.5999755859375" endY="-64.5999755859375" layoutX="1036.0" layoutY="223.0" startX="-53.5999755859375" startY="188.72900390625" stroke="CORAL" strokeWidth="10.0" />
                                                 <Line endX="160.4000244140625" endY="1.800048828125" layoutX="822.0" layoutY="418.0" startX="-138.5999755859375" startY="0.800048828125" stroke="CORAL" strokeWidth="10.0" />
-                                    <Text layoutX="79.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adaugă bibliotecar">
+                                    <Text layoutX="115.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add librarian">
                                        <font>
                                           <Font name="Garamond" size="27.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="430.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emite card">
+                                    <Text layoutX="430.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue card">
                                        <font>
                                           <Font name="Garamond" size="27.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="765.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trimite email">
+                                    <Text layoutX="765.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send Email">
                                        <font>
                                           <Font name="Garamond" size="27.0" />
                                        </font>
@@ -90,25 +90,25 @@
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#handleMenuClose" text="Ieșire" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuClose" text="Exit" />
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Add">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#handleMenuAddMember" text="Adaugă bibliotecar" />
-                                <MenuItem mnemonicParsing="false" onAction="#handleMenuAddCard" text="Emitere card" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuAddMember" text="Add librarian" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuAddCard" text="Issue card" />
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Delete">
+                        <Menu mnemonicParsing="false" text="Misc">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#handleMenuDeleteLibrarian" text="Stergere bibliotecar" />
-                                <MenuItem mnemonicParsing="false" onAction="#handleMenuEditLibrarian" text="Modificare bibliotecar" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuDeleteLibrarian" text="Delete librarian" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuEditLibrarian" text="Edit librarian" />
 
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Notify">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#handleMenuOverdueNotification" text="Trimite notificare" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleMenuOverdueNotification" text="Send notification" />
                             </items>
                         </Menu>
                     </menus>

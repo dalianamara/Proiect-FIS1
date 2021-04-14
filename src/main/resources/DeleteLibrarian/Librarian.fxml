@@ -16,25 +16,25 @@
    <children>
       <TabPane layoutY="1.0" prefHeight="738.0" prefWidth="1500.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Bibliotecari">
+          <Tab text="Librarians">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="753.0" prefWidth="1500.0">
                      <children>
                         <HBox layoutX="321.0" prefHeight="682.0" prefWidth="1500.0">
                            <children>
-                              <TableView fx:id="studenttable" prefHeight="682.0" prefWidth="1500.0" styleClass="table-context">
+                              <TableView fx:id="librarianstable" prefHeight="682.0" prefWidth="1500.0" styleClass="table-context">
                                 <columns>
                                     <TableColumn fx:id="idcolumn" prefWidth="75.0" text="ID" />
-                                    <TableColumn fx:id="firstnamecolumn" prefWidth="204.0" text="Nume" />
-                                    <TableColumn fx:id="lastnamecolumn" prefWidth="223.5999755859375" text="Prenume" />
+                                    <TableColumn fx:id="firstnamecolumn" prefWidth="204.0" text="Last Name" />
+                                    <TableColumn fx:id="lastnamecolumn" prefWidth="223.5999755859375" text="First Name" />
                                     <TableColumn fx:id="emailcolumn" prefWidth="226.0" text="Email" />
-                                    <TableColumn fx:id="adresacolumn" prefWidth="229.5999755859375" text="Adresa" />
-                                    <TableColumn fx:id="telefoncolumn" prefWidth="229.5999755859375" text="Număr de telefon" />
+                                    <TableColumn fx:id="adresacolumn" prefWidth="229.5999755859375" text="Address" />
+                                    <TableColumn fx:id="telefoncolumn" prefWidth="229.5999755859375" text="Phone Number" />
                                 </columns>
                               </TableView>
                            </children>
                         </HBox>
-                        <Label alignment="CENTER" contentDisplay="TOP" layoutX="-3.0" layoutY="7.0" prefHeight="34.0" prefWidth="324.0" text="Ștergere bibliotecar">
+                        <Label alignment="CENTER" contentDisplay="TOP" layoutX="-3.0" layoutY="7.0" prefHeight="34.0" prefWidth="324.0" text="Delete librarian">
                            <padding>
                               <Insets top="10.0" />
                            </padding>
@@ -47,7 +47,7 @@
                               <JFXTextField fx:id="id" promptText="ID" />
                            </children>
                         </VBox>
-                        <JFXButton layoutX="27.0" layoutY="580.0" onAction="#deleteLibrarian" prefHeight="40.0" prefWidth="281.0" text="Șterge" />
+                        <JFXButton layoutX="27.0" layoutY="580.0" onAction="#deleteLibrarian" prefHeight="40.0" prefWidth="281.0" text="Delete" />
                      </children>
                   </AnchorPane>
             </content>

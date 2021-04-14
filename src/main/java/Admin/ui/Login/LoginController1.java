@@ -79,7 +79,7 @@ public class LoginController1 {
             }
             else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("Autentificare eșuată!");
+                alert.setHeaderText("Login failed!");
                 if (uname.isEmpty() || pass.isEmpty())
                 {
                     String mesj = "Empty field!";
@@ -87,7 +87,7 @@ public class LoginController1 {
                 }
                 else
                 {
-                    String mesj = "Username sau parolă incorecte!";
+                    String mesj = "Username or password is incorrect!";
                     alert.setContentText(mesj);
                 }
 
@@ -116,7 +116,7 @@ public class LoginController1 {
             stage.show();
         }
         catch (IOException ex) {
-            System.err.println("Exceptie!");
+            System.err.println("Exception!");
             System.err.println(ex.getMessage());
         }
     }

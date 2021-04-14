@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" styleClass="table-context" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.EditLibrarian.LibrarianController">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="738.0" prefWidth="1500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Bibliotecar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="753.0" prefWidth="1500.0">
+                     <children>
+                        <HBox layoutX="321.0" prefHeight="682.0" prefWidth="1500.0">
+                           <children>
+                              <TableView fx:id="studenttable" prefHeight="682.0" prefWidth="1500.0" styleClass="table-context">
+                                <columns>
+                                    <TableColumn fx:id="idcolumn" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="firstnamecolumn" prefWidth="204.0" text="Nume" />
+                                    <TableColumn fx:id="lastnamecolumn" prefWidth="223.5999755859375" text="Prenume" />
+                                    <TableColumn fx:id="emailcolumn" prefWidth="226.0" text="Email" />
+                                    <TableColumn fx:id="adresacolumn" prefWidth="229.5999755859375" text="Adresa" />
+                                    <TableColumn fx:id="telefoncolumn" prefWidth="229.5999755859375" text="Număr de telefon" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" contentDisplay="TOP" layoutX="-3.0" layoutY="7.0" prefHeight="34.0" prefWidth="324.0" text="Adaugă detaliile bibliotecarului">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <VBox layoutY="2.0" prefHeight="518.0" prefWidth="318.0">
+                           <children>
+                              <JFXTextField fx:id="id" promptText="ID">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="firstname" promptText="Nume">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="lastname" promptText="Prenume">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="email" promptText="Email">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="adresa" promptText="Adresa">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="telefon" promptText="Numar de telefon">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+
+                              <JFXButton onAction="#editLibrarian" prefHeight="26.0" prefWidth="300.0" text="Editează bibliotecar">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton layoutX="20.0" layoutY="252.0" onAction="#clearFields" prefHeight="26.0" prefWidth="300.0" text="Clear">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

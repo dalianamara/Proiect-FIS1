@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="757.0" style="-fx-background-image: url('/AddL/lib.jpg');" styleClass="root1" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.SendEmail.EmailController">
+<children>
+    <JFXTextField fx:id="emailid" labelFloat="true" layoutX="163.0" layoutY="96.0" prefHeight="34.0" prefWidth="713.0" promptText="Email ID" />
+    <JFXTextField fx:id="subject" labelFloat="true" layoutX="163.0" layoutY="283.0" prefHeight="34.0" prefWidth="713.0" promptText="Subiect" />
+    <Text fill="#4d4d4d" layoutX="166.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mesaj" wrappingWidth="102.6708984375">
+        <font>
+            <Font size="17.0" />
+        </font>
+    </Text>
+    <JFXPasswordField fx:id="password" labelFloat="true" layoutX="163.0" layoutY="161.0" prefHeight="34.0" prefWidth="713.0" promptText="Parola" />
+    <ScrollPane layoutX="165.0" layoutY="368.0" prefHeight="177.0" prefWidth="713.0">
+        <content>
+            <JFXTextArea fx:id="message" focusColor="CORAL" prefHeight="175.0" prefWidth="711.0" style="-fx-background-color: #f5deb3;" stylesheets="@/tema.css" />
+        </content>
+    </ScrollPane>
+    <JFXButton layoutX="723.0" layoutY="580.0" onAction="#handleSendButton" prefHeight="40.0" prefWidth="156.0" text="Send" />
+    <JFXTextField fx:id="receiverid" labelFloat="true" layoutX="163.0" layoutY="222.0" prefHeight="34.0" prefWidth="713.0" promptText="Recipient ID" />
+</children>
+</AnchorPane>

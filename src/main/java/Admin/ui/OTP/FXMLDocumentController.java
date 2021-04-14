@@ -137,5 +137,4 @@ public class FXMLDocumentController implements Initializable {
             String otp  = String.valueOf(randomPin);
             return otp; //returneaza valoarea otp-ului
         }
-
 }

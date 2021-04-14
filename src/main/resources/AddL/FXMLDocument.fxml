@@ -3,13 +3,27 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="757.0" style="-fx-background-image: url('/AddL/lib.jpg');" styleClass="root1" stylesheets="@/tema.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.ui.OTP.FXMLDocumentController">
    <children>
-      <JFXTextField fx:id="emailid" labelFloat="true" layoutX="161.0" layoutY="271.0" prefHeight="34.0" prefWidth="713.0" promptText="Email admin" text = "andrea.mara303@gmail.com" />
+      <JFXTextField fx:id="emailid" labelFloat="true" layoutX="161.0" layoutY="271.0" prefHeight="34.0" prefWidth="713.0" promptText="Email admin" text="andrea.mara303@gmail.com" />
       <JFXPasswordField fx:id="password" labelFloat="true" layoutX="161.0" layoutY="336.0" prefHeight="34.0" prefWidth="713.0" promptText="Parola" />
       <JFXButton layoutX="723.0" layoutY="580.0" onAction="#handleSendButton" prefHeight="40.0" prefWidth="156.0" text="Send" />
       <JFXTextField fx:id="receiverid" labelFloat="true" layoutX="161.0" layoutY="397.0" prefHeight="34.0" prefWidth="713.0" promptText="Email bibliotecar" />
+      <Label layoutX="380.0" layoutY="101.0" prefHeight="128.0" prefWidth="498.0" text="TRIMITE PAROLA UNICĂ" wrapText="true">
+         <font>
+            <Font name="Garamond" size="38.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="128.0" fitWidth="137.0" layoutX="240.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@email.png" />
+         </image>
+      </ImageView>
      </children>
 </AnchorPane>

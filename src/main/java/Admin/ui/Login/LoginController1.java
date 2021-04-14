@@ -1,5 +1,7 @@
 package Admin.ui.Login;
 
+import Admin.ui.OTP.LibrarianData;
+import Admin.ui.OTP.*;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -7,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -14,12 +17,13 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import Admin.ui.OTP.*;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
 
 public class LoginController1 {
     @FXML
@@ -27,7 +31,7 @@ public class LoginController1 {
     @FXML
     private JFXTextField username;
 
-    public static JSONArray readFromFiles(String fileName){
+    public static JSONArray readFromFile(String fileName){
         JSONParser parser=new JSONParser();
         JSONArray list=new JSONArray();
         try{
@@ -41,32 +45,55 @@ public class LoginController1 {
         return list;
     }
 
-    public static ArrayList<LibrarianData> getDriver() {
-        JSONArray list = readFromFiles("src/main/resources/Databases/Admin.json");
-        ArrayList<LibrarianData> administrator = new ArrayList<LibrarianData>();
+    public static ArrayList<AdminData> getDriver() {
+        JSONArray list = readFromFile("src/main/resources/Databases/Admin.json");
+        ArrayList<AdminData> administrator = new ArrayList<AdminData>();
         Iterator<JSONObject> it = list.iterator();
         while (it.hasNext()) {
             JSONObject obj = it.next();
             String objInt = (String) obj.get("Username");
             String objInt2 = (String) obj.get("Password");
-            LibrarianData s = new LibrarianData(objInt, objInt2);
+            AdminData s = new AdminData(objInt, objInt2);
             administrator.add(s);
         }
         return administrator;
     }
 
-    public void handleLoginButtonAction(ActionEvent actionEvent) {
+    public void handleLoginButtonAction(ActionEvent actionEvent) throws InterruptedException {
         String uname = username.getText();
         String pass = password.getText();
-        ArrayList<LibrarianData> studenti= getDriver();
-        Iterator<LibrarianData> it=studenti.iterator();
-        while(it.hasNext())
-        {
-            LibrarianData s=it.next();
-            if(s.getEmail().equals(uname) && s.getPass().equals(DigestUtils.shaHex(pass)))
-            {
+        ArrayList<AdminData> administrator= getDriver();
+        Iterator<AdminData> it=administrator.iterator();
+        while(it.hasNext()) {
+            AdminData s = it.next();
+            if (s.getEmail().equals(uname) && s.getPass().equals(DigestUtils.shaHex(pass))) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Autentificare cu succes!");
+                String mesj = "Autentificarea s-a realizat cu succes!";
+                alert.setContentText(mesj);
+                alert.show();
+                TimeUnit.SECONDS.sleep(1);
+                alert.close();
                 closeStage();
                 loadMain();
+            }
+            else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Autentificare eșuată!");
+                if (uname.isEmpty() || pass.isEmpty())
+                {
+                    String mesj = "Empty field!";
+                    alert.setContentText(mesj);
+                }
+                else
+                {
+                    String mesj = "Username sau parolă incorecte!";
+                    alert.setContentText(mesj);
+                }
+
+                alert.show();
+                TimeUnit.SECONDS.sleep(1);
+                alert.close();
             }
         }
     }
@@ -87,13 +114,10 @@ public class LoginController1 {
             stage.setTitle("Administrator");
             stage.setScene(new Scene(parent));
             stage.show();
-
         }
         catch (IOException ex) {
-
+            System.err.println("Exceptie!");
+            System.err.println(ex.getMessage());
         }
     }
-
-
-
 }

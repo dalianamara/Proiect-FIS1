@@ -43,7 +43,7 @@ public class ChoiceController {
         Stage mainStage = (Stage) studentPIC.getScene().getWindow();
         try {
 
-            mainStage.setTitle("Student");
+
         }
         catch(Exception e){}
     }

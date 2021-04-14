@@ -1,10 +1,11 @@
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 
-public class main extends Application {
+public class Main extends Application {
+
 
     public static void main(String[] args) {
         launch(args);
@@ -15,6 +16,6 @@ public class main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/Choice/Choice.fxml"));
         primaryStage.setTitle("Admin");
         primaryStage.setScene(new Scene(root, 1036, 705));
-        primaryStage.show(); //MAIN
+        primaryStage.show();
     }
 }

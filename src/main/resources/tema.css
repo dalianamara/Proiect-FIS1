@@ -10,10 +10,26 @@
 }
 
 .root{
-    -fx-background-image: url("books.jpg");
+    //-fx-background-image: url("/Login/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+    -fx-pref-height : 715;
+   // -fx-pref-width : 1036;
+}
+
+.root2{
+    //-fx-background-image: url("/Login/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+    -fx-pref-height : 715;
+    -fx-pref-width : 1036;
+}
+
+.login{
+          //-fx-background-image: url("/Login/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+         -fx-pref-height : 705;
+         -fx-pref-width : 1036;
+}
+
+.root_table{
     -fx-pref-height : 705;
     -fx-pref-width : 1036;
-
 }
 
 .root1{
@@ -21,19 +37,6 @@
     -fx-pref-height : 705;
     -fx-pref-width : 1036;
 
-}
-
-.root2{
-    -fx-background-image: url("/java/Choice/books.jpg");
-    -fx-pref-height : 705;
-    -fx-pref-width : 1036;
-
-}
-
-.glyph-icon
-{
-    -fx-fill: #000000;
-	-fx-alignment: center ;
 }
 
 .button{
@@ -59,7 +62,7 @@
     -fx-text-fill: derive(-fx-secondary, 20%);
 }
 
-/*Login Screen Specific*/
+/*Login Screen*/
 
 
 .wrong-credentials
@@ -81,34 +84,17 @@
 
 .tab-label{
     -fx-text-fill: #000000;
-    -fx-font-size: 10pt; 
+    -fx-font-size: 10pt;
 }
 
 
 .tab-main{
-	
+
     -fx-pref-height : 60;
     -fx-max-height : 60;
 }
 
-.settings-tab{
-    -fx-background-color: #f5deb3;
-    -fx-padding: 5px 20px 5px 20px;
-}
-
-.settings-tab:selected{
-    -fx-background-color: -fx-secondary;
-}
-
-.settings-tab:selected .tab-label{
-    -fx-text-fill: #000000;
-}
-
-.settings-tab .tab-header-background{
-    -fx-background-color: #FF7F50;
-}
-
-/*Menu bar Styling*/
+/*Menu bar*/
 .menu-bar{
     -fx-font-size: 14;
     -fx-base : #FF7F50;
@@ -121,37 +107,7 @@
     -fx-min-width: 150px;
 }
 
-/*Hamburger Styling*/
-.jfx-hamburger-icon{
-    -fx-spacing: 7;
-}
-
-.jfx-hamburger-icon StackPane
-{
-    -fx-background-color: -fx-secondary;
-    -fx-background-radius: 5px;
-}
-
-/*Toolbar buttons*/
-.toolbar-button
-{
-    -fx-border-color: transparent;
-    -fx-background-color: derive(-fx-primary, 10%);
-    -fx-background-radius: 0px;
-    -fx-border-radius: 0px;
-}
-.toolbar-button:hover
-{
-    -fx-background-color: -fx-secondary;
-    -fx-text-fill: -fx-primary;
-}
-
-.toolbar-button:hover .glyph-icon, .toolbar-button:hover .glyph-icon
-{
-    -fx-fill: -fx-primary;
-}
-
-/*Text styling*/
+/*Text*/
 .main-text
 {
     -fx-fill: #000000;
@@ -159,9 +115,6 @@
     -fx-text-alignment: center;
 }
 
-.submission-container{
-    -fx-background-color: #FF7F50;
-}
 
 /*Dialog styling*/
 .dialog-button{
@@ -182,38 +135,21 @@
     -fx-hgap:8;
 }
 
-/*Chart Styling*/
-.data0.chart-pie{
-    -fx-pie-color: -fx-secondary;
-    -fx-border-color: derive(-fx-secondary, -30%);
-}
-.data1.chart-pie{
-    -fx-pie-color: #FFC696;
-    -fx-border-color: #FFC696;
-}
-.chart-pie-label
-{
-    -fx-fill : derive(-fx-secondary, -5%);
-}
-
-/*About window*/
-.about-text{
-    -fx-fill: -fx-secondary;
-}
-
-.about-button{
-    -fx-border-color: transparent;
-}
-
 /*Custom window background*/
 .custom-pane{
-    -fx-background-image: url("/java/Bibliotecar/ui/Login/books1.jpg");
+    -fx-background-image: url("/Login/books1.jpg");
+}
+
+.custom-pane1{
+    -fx-pref-height : 650;
+    -fx-pref-width : 1036;
+    -fx-background-image: url("/Login/books1.jpg");
 }
 
 /*TableView Default*/
 .table-view{
-    -fx-background-color: #f8de7e;
-    -fx-font-size: 16px; 
+    -fx-background-color: #FFFFCC;
+    -fx-font-size: 16px;
     -fx-border-color: derive(-fx-secondary, -60%);
 }
 .table-view:focused{
@@ -223,31 +159,31 @@
     -fx-cell-size: 40px;
 }
 .table-view .column-header-background{
-    -fx-background-color: #ff7f50;
+    -fx-background-color: #f8de7e;
 }
 .table-view .column-header-background .label{
     -fx-background-color: transparent;
-    -fx-text-fill: white;
+    -fx-text-fill: black;
 }
 .table-view .column-header {
     -fx-background-color: transparent;
 }
 .table-view .table-cell{
-    -fx-text-fill: white;
+    -fx-text-fill: black;
 }
 .table-row-cell:focused, .table-cell:focused{
     -fx-text-fill: -fx-primary;
 }
 .table-row-cell{
-    -fx-background-color: -fx-primary;
+    -fx-background-color: #f8de7e;
     -fx-border-color: transparent;
     -fx-table-cell-border-color: transparent;
 }
 .table-column{
-    -fx-alignment: CENTER;  
+    -fx-alignment: CENTER;
 }
 .table-row-cell:even{
-    -fx-background-color: #ff7f50;
+    -fx-background-color: #FFFFCC;
 }
 .table-row-cell:selected {
     -fx-background-color: -fx-secondary;
@@ -258,7 +194,7 @@
     -fx-text-fill: -fx-primary;
 }
 .placeholder .label{
-    -fx-text-fill: white;
+    -fx-text-fill: black;
 }
 .table-view > .virtual-flow > .scroll-bar:vertical,
 .table-view > .virtual-flow > .scroll-bar:vertical > .track,
@@ -280,7 +216,7 @@
 }
 .table-view .filler{
     -fx-fill: #ff7f50;
-    -fx-background-image: url("/java/Bibliotecar/ui/Login/books.jpg");
+    -fx-background-image: url("/Login/books.jpg");
 }
 .table-context
 {
@@ -354,7 +290,7 @@
     -fx-font-weight: bold;
     -fx-text-fill: white;
 }
-.custom-alert:header *.header-panel{
+/* .custom-alert:header *.header-panel{
     -fx-background-color: -fx-blue;
 }
 .custom-alert:header  .header-panel .label {
@@ -365,7 +301,7 @@
     -fx-font-size: 18px;
     -fx-font-style: italic;
     -fx-fill: -fx-primary;
-}
+}*/
 
 /* Context menu */
 
